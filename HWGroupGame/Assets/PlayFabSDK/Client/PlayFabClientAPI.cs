@@ -2258,7 +2258,10 @@ namespace PlayFab
             PlayFabHttp.MakeApiCall("/Client/WriteTitleEvent", request, AuthType.LoginSession, resultCallback, errorCallback, customData, extraHeaders, context, callSettings);
         }
 
-
+        public static void GetCatalogItems(GetCatalogItemsRequest catalogRequest)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

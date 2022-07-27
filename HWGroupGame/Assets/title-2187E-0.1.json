@@ -1,0 +1,282 @@
+{
+  "CatalogVersion": "0.1",
+  "Catalog": [
+    {
+      "ItemId": "One",
+      "ItemClass": null,
+      "CatalogVersion": "0.1",
+      "DisplayName": "My first item",
+      "Description": null,
+      "VirtualCurrencyPrices": null,
+      "RealCurrencyPrices": null,
+      "Tags": null,
+      "CustomData": null,
+      "Consumable": null,
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "ktn",
+      "ItemClass": "Weapon",
+      "CatalogVersion": "0.1",
+      "DisplayName": "Katana",
+      "Description": "Long Japanese sword. Damage 20 hp.",
+      "VirtualCurrencyPrices": {
+        "BL": 300
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "Weapon",
+        "Katana",
+        "Sword"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "pst",
+      "ItemClass": "Weapon",
+      "CatalogVersion": "0.1",
+      "DisplayName": "Pistol",
+      "Description": "One hand pistol. Not rubber. Damage 10 hp.",
+      "VirtualCurrencyPrices": {
+        "BL": 150
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "Weapon",
+        "Pistol"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "slh",
+      "ItemClass": "Weapon",
+      "CatalogVersion": "0.1",
+      "DisplayName": "Slingshot",
+      "Description": "Use for shooting. Damage 5 hp.",
+      "VirtualCurrencyPrices": {
+        "BL": 100
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "Weapon",
+        "Slingshot"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "blt_ammo",
+      "ItemClass": "Ammunition",
+      "CatalogVersion": "0.1",
+      "DisplayName": "Bullet",
+      "Description": "Bullet for your pistol. ",
+      "VirtualCurrencyPrices": {
+        "BL": 1
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "Ammunition",
+        "Pistol",
+        "Bullet"
+      ],
+      "CustomData": "{\"Count\":\"14\"}",
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "gs_ammo",
+      "ItemClass": "Ammunition",
+      "CatalogVersion": "0.1",
+      "DisplayName": "Green Star",
+      "Description": "Ammunition for your slingshot.",
+      "VirtualCurrencyPrices": {
+        "BL": 2
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "Ammunition",
+        "Slingshot",
+        "Bullet"
+      ],
+      "CustomData": "{\"Count\":\"5\"}",
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "bnd1",
+      "ItemClass": null,
+      "CatalogVersion": "0.1",
+      "DisplayName": null,
+      "Description": null,
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": {
+        "BundledItems": [
+          "blt_ammo",
+          "blt_ammo",
+          "blt_ammo",
+          "blt_ammo",
+          "blt_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo"
+        ],
+        "BundledResultTables": [],
+        "BundledVirtualCurrencies": {
+          "BL": 100
+        }
+      },
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "cnt1",
+      "ItemClass": "box",
+      "CatalogVersion": "0.1",
+      "DisplayName": null,
+      "Description": null,
+      "VirtualCurrencyPrices": {
+        "BL": 25
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": 1,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": {
+        "KeyItemId": null,
+        "ItemContents": [
+          "slh",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo",
+          "gs_ammo"
+        ],
+        "ResultTableContents": [],
+        "VirtualCurrencyContents": null
+      },
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": [
+    {
+      "TableId": "dt1",
+      "Nodes": [
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "slh",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "gs_ammo",
+          "Weight": 5
+        }
+      ]
+    }
+  ]
+}

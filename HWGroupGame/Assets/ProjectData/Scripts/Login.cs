@@ -14,6 +14,8 @@ public class Login : MonoBehaviourPunCallbacks
     private const string GAME_VERSION = "dev";
     private const string AUTHENTIFICATION_KEY = "AUTHENTIFICATION_KEY";
 
+    [SerializeField] private CatalogManager _catalog;
+
     [Header("UI")]
     [SerializeField] private GameObject _loadingWin;
     [SerializeField] private GameObject _createAcc;
@@ -70,6 +72,7 @@ public class Login : MonoBehaviourPunCallbacks
         Connect();
 
         PlayFabClientAPI.GetAccountInfo(new GetAccountInfoRequest(), SuccessInfo, Error);
+        _catalog.Init();
 
         //connectImage.color = Color.green;
         //connectText.text = "Connection succeeded";
