@@ -1,9 +1,11 @@
 using PlayFab;
 using PlayFab.ClientModels;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Authorization : MonoBehaviour
@@ -16,10 +18,10 @@ public class Authorization : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private GameObject _signIn;
-    [SerializeField] private GameObject _lobbyUI;
-    [SerializeField] private Text _lobbyUIText;
+    //[SerializeField] private GameObject _lobbyUI;
+    //[SerializeField] private Text _lobbyUIText;
 
-    private string _userName;
+    public string _userName;
     private string _userPassword;
 
     private void Awake()
@@ -50,8 +52,10 @@ public class Authorization : MonoBehaviour
             _errorText.gameObject.SetActive(false);
             Debug.Log($"User enter: {result.LastLoginTime}");
             _signIn.SetActive(false);
-            _lobbyUI.SetActive(true);
-            _lobbyUIText.text = $"Hello, {_userName}!";
+            //_lobbyUI.SetActive(true);
+            SceneManager.LoadScene("Lobby");
+            OnConnectedToMaster();
+            //_lobbyUIText.text = $"Hello, {_userName}!";
         }, error =>
         {
             _errorText.gameObject.SetActive(true);
@@ -59,4 +63,10 @@ public class Authorization : MonoBehaviour
             Debug.LogError(error);
         });
     }
+
+    private void OnConnectedToMaster()
+    {
+        //throw new NotImplementedException();
+    }
+    
 }
