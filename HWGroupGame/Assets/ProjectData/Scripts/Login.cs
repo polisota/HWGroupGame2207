@@ -5,13 +5,14 @@ using PlayFab.ClientModels;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Login : MonoBehaviourPunCallbacks
 {
     private const string PLAYFAB_TITLE = "2187E";
-    private const string GAME_VERSION = "dev";
+   
     private const string AUTHENTIFICATION_KEY = "AUTHENTIFICATION_KEY";
 
     [SerializeField] private CatalogManager _catalog;
@@ -20,6 +21,7 @@ public class Login : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject _loadingWin;
     [SerializeField] private GameObject _createAcc;
     [SerializeField] private GameObject _signIn;
+    [SerializeField] private TMP_InputField _roomName;
 
 
     //[Header("Photon UI")]
@@ -52,9 +54,9 @@ public class Login : MonoBehaviourPunCallbacks
             CreateAccount = needCreation
         };
         PlayFabClientAPI.LoginWithCustomID(request, Success, Fail, data);
-
-        _loadingWin.SetActive(false);
+                
         _createAcc.SetActive(true);
+        _loadingWin.SetActive(false);
     }
 
     public void SignInWin()
@@ -69,7 +71,7 @@ public class Login : MonoBehaviourPunCallbacks
         Debug.Log(result.PlayFabId);
         Debug.Log(((Data)result.CustomData).needCreation);
         Debug.Log(((Data)result.CustomData).id);
-        Connect();
+        //Connect();
 
         PlayFabClientAPI.GetAccountInfo(new GetAccountInfoRequest(), SuccessInfo, Error);
         _catalog.Init();
@@ -99,11 +101,13 @@ public class Login : MonoBehaviourPunCallbacks
         //connectButton.interactable = true;
     }
 
-    private void Connect()
+    /*
+     public void Connect()
     {
         if (PhotonNetwork.IsConnected)
         {
-            PhotonNetwork.JoinRandomOrCreateRoom();
+            //PhotonNetwork.JoinRandomOrCreateRoom();
+            PhotonNetwork.CreateRoom(_roomName.ToString());
         }
         else
         {
@@ -113,38 +117,5 @@ public class Login : MonoBehaviourPunCallbacks
         }
         Debug.Log("PhotonConnect");        
     }
-
-    public void PhotonDisconnect()
-    {
-        PhotonNetwork.Disconnect();
-        Debug.LogError("PhotonDisconnect");
-    }
-
-    public override void OnConnected()
-    {
-        Debug.Log("OnConnected");
-    }
-
-    public override void OnConnectedToMaster()
-    {
-        Debug.Log("OnConnectedToMaster");
-        PhotonNetwork.JoinRandomOrCreateRoom();
-    }
-
-    public override void OnCustomAuthenticationResponse(Dictionary<string, object> data)
-    {
-        foreach (KeyValuePair<string, object> kvp in data)
-            Debug.Log($"key: {kvp.Key}/value: {kvp.Value}");
-    }
-
-    public override void OnCustomAuthenticationFailed(string debugMessage)
-    {
-        Debug.Log(debugMessage);
-    }
-
-    public override void OnPlayerEnteredRoom(Player newPlayer)
-    {
-        Debug.Log(newPlayer.NickName);
-        Debug.Log(PhotonNetwork.CurrentRoom.Name);        
-    }   
+     */    
 }

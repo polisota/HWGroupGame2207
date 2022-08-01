@@ -18,7 +18,7 @@ public class CatalogManager : MonoBehaviour
         foreach(var item in result.Catalog)
         {
             _catalog.Add(item.ItemId, item);
-            Debug.Log($"Name item: {item.DisplayName} ID item: {item.ItemId}");
+            //Debug.Log($"Name item: {item.DisplayName} ID item: {item.ItemId}");
         }
     }
 
