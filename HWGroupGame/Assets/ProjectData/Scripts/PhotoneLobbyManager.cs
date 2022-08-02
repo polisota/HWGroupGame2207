@@ -80,7 +80,7 @@ public class PhotoneLobbyManager : MonoBehaviourPunCallbacks
         string roomForJoin = _roomName.text;
         string passForJoin = _roomPass.text;
 
-        if (roomForJoin == "Friends" && passForJoin == "friends")
+        if (roomForJoin == friendRoom && passForJoin == friendPass)
         {            
             RoomOptions options = new RoomOptions { MaxPlayers = _maxPlayers, PlayerTtl = 10000, IsOpen = true };
             PhotonNetwork.JoinOrCreateRoom("Friends", options, TypedLobby.Default);
